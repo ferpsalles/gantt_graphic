@@ -1,0 +1,14 @@
+MVP
+
+Tabela dinâmica com livre movimento das tarefas dentro de cada projeto.
+
+atributos das entidades:
+Projeto - data, cliente, descrição, eficiencia
+Tarefa - descrição, tempo desenv.
+Desenv. - nome, carga horaria, ocupado/livre
+
+relacionamento:
+ tarefa -> projeto
+ desenv. -> tarefa
+
+ projeto > tarefa > desenv.
