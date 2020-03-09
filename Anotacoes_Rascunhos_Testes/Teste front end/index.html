@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Projeto Integrador</title>
+</head>
+<body>
+<script src="static/js/app.js"></script>
+<header class="menu-principal">
+    <div id="lateral">
+        <div id="logo"><a href="https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020" target="_blank">
+            <img src="static/img/Untitled-2.png" />
+          </div>
+         </div>
+<!--Modal Buttons-->
+<div class="modal-btn">
+    <button class="modal-open" data-modal="modal1"> + Projeto</button>
+    <button class="modal-open" data-modal="modal2"> + Tarefa</button>
+    <button class="modal-open" data-modal="modal3"> + Desenvolvedor </button>
+    <button class="modal-open" data-modal="modal4"> + Relatório</button>
+</div>
+</header>
+                
+<!-- Modal Section-->
+<div id="modal" class="modal-content" id="modal1">
+            <div class="container">
+                <div class="modal-header">Adicionar Projeto <button class="icon">close<i class="material-icons"></i></button></div>
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" class="input" placeholder="Nome do projeto">
+                        <input type="text" class="input" placeholder="Cliente">
+                        <input type="number" class="input" placeholder="Inicio do projeto">
+                        <input type="number" class="input" placeholder="Finalização do projeto">
+                        <input type="text" class="input" placeholder="Descrição">
+                    </form>
+                </div>
+                <div class="modal-footer"><a  href="" class="button">Cadastrar</a></button></div>
+</div>
+
+<div id="modal" class="modal-content" id="modal2">
+                <div class="container">
+                    <div class="modal-header">Adicionar Tarefa <button class="icon">close<i class="material-icons"></i></button></div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="text" class="input" placeholder="Selecionar projeto">
+                            <input type="text" class="input" placeholder="Descrição">
+                            <input type="number" class="input" placeholder="Data de início">
+                            <input type="number" class="input" placeholder="Data final">
+                            <a  href="" class="button">Cadastrar</a>
+                        </form>
+                    </div>
+                    <div class="modal-footer"><a  href="" class="button">Cadastrar</a></button></div>
+                </div>
+</div>
+<div id="modal" class="modal-content" id="modal3">
+                <div class="container">
+                    <div class="modal-header">Adicionar Desenvolvedor<button class="icon">close<i class="material-icons"></i></button></div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="text" class="input" placeholder="Nome">
+                            <input type="number" class="input" placeholder="Carga horária">
+                            <input type="text" class="input" placeholder="Status">
+                            <a  href="" class="button">Cadastrar</a>
+                        </form>
+                    </div>
+                    <div class="modal-footer"><a  href="" class="button">Cadastrar</a></button></div>
+                </div>
+             </div>
+<div id="modal" class="modal-content" id="modal4">
+                <div class="container">
+                    <div class="modal-header">Relatórios<button class="icon">close<i class="material-icons"></i></button></div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="text" class="input" placeholder="Projetos">
+                            <input type="text" class="input" placeholder="Tarefas">
+                            <input type="text" class="input" placeholder="Desenvolvedores">
+                        </form>
+                    </div>
+                </div>
+             </div>
+</div>
+
+
+    <main>
+       
+    </main>
+<footer>
+    
+</footer>
+</body>
+</html>
