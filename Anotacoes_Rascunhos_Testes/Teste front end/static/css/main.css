@@ -19,17 +19,6 @@ body {
     padding: center;
 }
 
-.modal-content{
-    width: 50%;
-    background: #fff;
-    z-index:4;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 8px 24px;
-    border-radius: 4px;
-}
-
 .modal-open{
     padding:15%;
     background: #1D262D;
@@ -54,38 +43,3 @@ body {
     animation: ;
 }
 
-.modal-header{
-    font-weight: 500;
-    padding:10px 0;
-    font-size: 26 px;
-}
-
-.modal-header .modal-close{
-    float:right;
-    font-size: 20px;
-    background-color: #efefef;
-    border:0;
-    outline:0;
-    padding: 5px 8px;
-    border-radius: 50%;
-}
-
-.modal-body{
-    color:#7b7b7b;
-    padding: 15 px 0;
-
-}
-
-.modal-footer{
-    padding: 15 px 0;
-}
-
-.modal-footer .modal-close{
-    padding: 8px 16 px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    color: #1a73e8;
-
-}
