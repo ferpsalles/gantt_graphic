@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
@@ -19,67 +17,25 @@
           </div>
          </div>
 <!--Modal Buttons-->
+
 <a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/tarefa1.png"></a>
 <div class="modal-btn-projeto">
-     <form action="" class="login_form modal" id="btn-projeto" style="display:none;">
-        <h3>Criar uma nova tarefa:</h3>
-        <p><label>Nome:</label><input type="text" /></p>
-        <p><label>Descrição:</label><input type="text" /></p>
-        <p><label>Data de inicio:</label><input type="number" /></p>
-        <p><label>Data do fim:</label><input type="number" /></p>
-        <p><label>Programadores:</label><input type="text" /></p>
-        <p><input type="submit" value="Cadastrar" /></p>
-</form>
-</div>
-<a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/tarefa.png"></a>
-<div class="modal-btn-tarefa">
-    <form action="" class="login_form modal" id="btn-tarefa" style="display:none;">
-       <h3>Criar uma nova tarefa:</h3>
-       <p><label>Projeto:</label><input type="text" /></p>
-       <p><label>Descrição:</label><input type="text" /></p>
-       <p><label>Data de inicio:</label><input type="number" /></p>
-       <p><label>Data do fim:</label><input type="number" /></p>
-       <p><label>Programadores:</label><input type="text" /></p>
-       <p><input type="submit" value="Cadastrar" /></p>
-</form>
-</div>
-<a class="btn" href="#ex2" rel="modal:open"><img src="static/img/desenv.png"></a>
-<div class="modal-btn-desenvolvedor"></div>
-    <form action="" class="login_form modal" id="btn-desenvolvedor" style="display:none;">
-       <h3>Relacionar Desenvolvedores</h3>
-       <p><label>Projeto:</label><input type="text" /></p>
-       <p><label>Tarefa:</label><input type="text" /></p>
-       <p><label>Atividade:</label><input type="number" /></p>
-       <p><input type="submit" value="Cadastrar" /></p>
-</form>
-</div>
-<a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/relatorio.png"></a>
-   <form action="" class="login_form modal" id="btn-relatorio" style="display:none;">
-       <h3>Imprimir Relatório</h3>
-       <p><input type="submit" value="Projetos" /></p>
-       <p><input type="submit" value="Tarefas" /></p>
-       <p><input type="submit" value="Desenvolvedores" /></p>
-</form>
 
-</header>
-<main>
-    <div class="modal-btn-projeto">
-    <a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/tarefa1.png"></a>
-    </div>
-<div class="modal-btn-projeto">
-     <form action="" class="login_form modal" id="btn-projeto" style="display:none;">
-        <h3>Criar uma nova tarefa:</h3>
-        <p><label>Nome:</label><input type="text" /></p>
-        <p><label>Descrição:</label><input type="text" /></p>
+     <form action="" class="login_form modal" id="ex2" style="display:none;">
+        <h3>Criar um novo projeto:</h3>
+        <p><label>Cliente:</label><input type="text" /></p>
         <p><label>Data de inicio:</label><input type="number" /></p>
         <p><label>Data do fim:</label><input type="number" /></p>
-        <p><label>Programadores:</label><input type="text" /></p>
+        <p><label>Descrição:</label><input type="text" /></p>
+        <p><label>Eficiência:</label><input type="text" /></p>
         <p><input type="submit" value="Cadastrar" /></p>
-</form>
+    </form>
 </div>
+
 <a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/tarefa.png"></a>
 <div class="modal-btn-tarefa">
-    <form action="" class="login_form modal" id="btn-tarefa" style="display:none;">
+
+    <form action="" class="login_form modal" id="ex2" style="display:none;">
        <h3>Criar uma nova tarefa:</h3>
        <p><label>Projeto:</label><input type="text" /></p>
        <p><label>Descrição:</label><input type="text" /></p>
@@ -87,39 +43,39 @@
        <p><label>Data do fim:</label><input type="number" /></p>
        <p><label>Programadores:</label><input type="text" /></p>
        <p><input type="submit" value="Cadastrar" /></p>
-</form>
+    </form>
 </div>
+
 <a class="btn" href="#ex2" rel="modal:open"><img src="static/img/desenv.png"></a>
-<div class="modal-btn-desenvolvedor"></div>
-    <form action="" class="login_form modal" id="btn-desenvolvedor" style="display:none;">
+<div class="modal-btn-desenvolvedor">
+
+    <form action="" class="login_form modal" id="ex2" style="display:none;">
        <h3>Relacionar Desenvolvedores</h3>
        <p><label>Projeto:</label><input type="text" /></p>
        <p><label>Tarefa:</label><input type="text" /></p>
        <p><label>Atividade:</label><input type="number" /></p>
        <p><input type="submit" value="Cadastrar" /></p>
-</form>
+    </form>
 </div>
+
 <a class="btn" href="#ex2" rel="modal:open"> <img src="static/img/relatorio.png"></a>
+<div class="modal-btn-relatorio">
+
    <form action="" class="login_form modal" id="ex2" style="display:none;">
        <h3>Imprimir Relatório</h3>
        <p><input type="submit" value="Projetos" /></p>
        <p><input type="submit" value="Tarefas" /></p>
        <p><input type="submit" value="Desenvolvedores" /></p>
-</form>
-<main>
-    <a class="btn" href="#ex2" rel="modal:open">Criar nova tarefa</a>
+    </form>
+</div>
+</header>
 
-<!-- Modal HTML embedded directly into document -->
-<form action="" class="login_form modal" id="ex2" style="display:none;">
-  <h3>Criar uma nova tarefa:</h3>
-  <p><label>Nome:</label><input type="text" /></p>
-  <p><label>Descrição:</label><input type="text" /></p>
-  <p><label>Programadores:</label><input type="text" /></p>
-  <p><input type="submit" value="Cadastrar" /></p>
-</form>
+<main>
 </main>
+
 <footer>
-    
 </footer>
+
 </body>
+
 </html>
