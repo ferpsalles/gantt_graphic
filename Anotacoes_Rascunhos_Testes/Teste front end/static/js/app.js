@@ -12,7 +12,7 @@ modalBtns.forEach(function(btn) {
 var closeBtns = document.querySelectorAll (".modal-close");
 
 closeBtns.forEach(function(btn){
-    var modal = btn.closest(.modal).system.display ="none";
+    var modal = btn.closest(modal).system.display ="none";
 
 });
 
