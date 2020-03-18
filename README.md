@@ -1,3 +1,33 @@
->º#zÚ× ­§h¯k›m6Ğúèëh"{^‚¶¢ºŞjX³iÚ)zZ,j[§¢ÇhÚÇ ºwh±é²ÚŞuàZÊx6¢ÇZÄô‰
-z‡^ÛM´
-‰ìŠË^§+‰ªzéšj™bqª0y·hºØ¥‹6§vŠ‰¨+jfxf§¶ÚZ­¦§–+yÊ'¶º%y×©®ˆŞ¶‹z«®)Ú,Mç'¢Z ‰«n&åŠ‹^q«.¶)bÍ§Z°Úyø§‰Ö¬g^±éï¢[â™éí ‰ìµ©Z¡Ú)®ˆŞ¶Åºw"¢v¥‰Öx*âzéš¥«-jz,zç(š›­iÚ+ºÚ¢×«š)Ú”Vš¡Éhçh¦º#zÚ¢h"µÉhèm¶›?ş­•¦Ü¢oÕŠÚ+©ÿ¦º#zÚ"× ­§h¯k›m6Ò­EçŞ®w"jm¦Ïÿ~¶©¥è¨ş§¶Øm¶›?ı×¯zZ)z» ¢ˆ%yÊ&ıÈZ®ßâ×«iËb½ïİ¡Ë?©ez¼¿©íµÈZ®Ğ¨Úânè§µëz¹ÚÖ‘jj,†Ûi³ÿàŠÙZmÊ&ı÷«¦Æ¥•ëiºâzVŒ¢h¥–(m¶›?ş­•¦Ü¢oài»&¢h¥–%b¶ŠÃjx•(¥½¨m¶›?ş­•¦Ü¢oÕŠÚ+©À‚¶yÈ¦z{h°+i×œzj,j‹)®‡Ş²Ê+zÊ^–‹.¦Šíz‡Ş­ç"vŠZ­ª)®ˆ+zË(vŠk¢7­
+#Projeto Integrador realizado pelos alunos do 2Âº (segundo) semestre de **Banco de Dados** da FATEC/SJC no ano de 2020.
+
+Consiste na criaÃ§Ã£o de uma aplicaÃ§Ã£o web utilizando o diagrama de Gantt para anÃ¡lise e controle de projetos.
+
+
+#Requerimentos (Tecnologias e bibliotecas utilizadas)
+
+NÃ£o definidas (Em desenvolvimento)
+
+
+#InstalaÃ§Ã£o do projeto/ Funcionalidade
+
+Crie uma pasta no seu computador
+Abra o terminal
+FaÃ§a o clone do projeto com git clone https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020.git
+
+
+#ReferÃªncia:
+
+https://frappe.io/gantt
+https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+
+
+#Contribuintes
+
+Fernanda Ramos: https://gitlab.com/ferpsalles
+Gabriela Momilli: https://gitlab.com/gabsmomilli
+Vitor Daniel Silva: https://gitlab.com/VitorDan
+
+
+#Agradecimentos
+
+Agradecemos aos professores pelo suporte oferecido para o progresso do projeto
