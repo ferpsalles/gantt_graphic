@@ -15,7 +15,7 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 ## Levantamento de requisitos:
 Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
 
-# Requisitos Funcionais
+###### Requisitos Funcionais
 - Pessoas responsáveis para o registro no sistema serão capacitados:
 - Cadastrar projetos (Informar: data, cliente, descrição, tarefa e desenvolvedores para cada projeto)
 - Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)
@@ -23,7 +23,7 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 - O usuário pode excluir ou alterar dados 
 - O usuário pode pesquisar todo ou um sub-conjunto do banco de dados	 e imprimir relatórios (projetos, tarefas e desenvolvedores)
 
-# Requisitos não funcionais
+###### Requisitos não funcionais
 - A interface do usuário deve ser implementada de maneira simples (interface web)
 - Os dados serão visualizados em tabelas (diagrama de gantt)
 - Velocidade de resposta e tempo de atualização de tela
