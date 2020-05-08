@@ -5,8 +5,8 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 - Disciplinas relacionadas:
 - Arquitetura e Modelagem de Banco de dados - Prof Emanuel Mineda
 - Engenharia de Software - Prof Giuliano Araujo Bertoti
-- Linguagem de Programação I - Prof Adriana 
-- 
+- Linguagem de Programação I - Prof Adriana da Silva Jacinto
+
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
 
@@ -15,19 +15,19 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 ## Levantamento de requisitos:
 Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
 
-- Requisitos Funcionais
-o   Pessoas responsáveis para o registro no sistema serão capacitados:
-o	Cadastrar projetos (Informar: data, cliente, descrição, tarefa e desenvolvedores para cada projeto)
-o	Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)
-o	Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
-o	O usuário pode excluir ou alterar dados 
-o	O usuário pode pesquisar todo ou um sub-conjunto do banco de dados	 e imprimir relatórios (projetos, tarefas e desenvolvedores)
+# Requisitos Funcionais
+- Pessoas responsáveis para o registro no sistema serão capacitados:
+- Cadastrar projetos (Informar: data, cliente, descrição, tarefa e desenvolvedores para cada projeto)
+- Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)
+- Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
+- O usuário pode excluir ou alterar dados 
+- O usuário pode pesquisar todo ou um sub-conjunto do banco de dados	 e imprimir relatórios (projetos, tarefas e desenvolvedores)
 
-- Requisitos não funcionais
-o	A interface do usuário deve ser implementada de maneira simples (interface web)
-o	Os dados serão visualizados em tabelas (diagrama de gantt)
-o	Velocidade de resposta e tempo de atualização de tela
-o	Disponibilidade
+# Requisitos não funcionais
+- A interface do usuário deve ser implementada de maneira simples (interface web)
+- Os dados serão visualizados em tabelas (diagrama de gantt)
+- Velocidade de resposta e tempo de atualização de tela
+- Disponibilidade
 
 
 
