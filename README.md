@@ -15,20 +15,32 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 ## Levantamento de requisitos:
 Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
 
-###### Requisitos Funcionais
-- Pessoas responsáveis para o registro no sistema serão capacitados:
-- Cadastrar projetos (Informar: data, cliente, descrição, tarefa e desenvolvedores para cada projeto)
-- Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)
-- Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
-- O usuário pode excluir ou alterar dados 
-- O usuário pode pesquisar todo ou um sub-conjunto do banco de dados	 e imprimir relatórios (projetos, tarefas e desenvolvedores)
+##### Requisitos Funcionais
 
-###### Requisitos não funcionais
-- A interface do usuário deve ser implementada de maneira simples (interface web)
-- Os dados serão visualizados em tabelas (diagrama de gantt)
-- Velocidade de resposta e tempo de atualização de tela
-- Disponibilidade
+| Requisitos funcionais             |  Código |              Descrição                                                                                                                                     |
+| ----------------------------------|---------| -----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Cadastrar projetos                 |RF01     |Pessoas responsáveis para o registro no sistema serão capacitados para cadastrar os projetos, informando: data, cliente, descrição, tarefa e desenvolvedores|
+|Cadastrar tarefas                  |RF02     |Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)                                                    |
+|Cadastrar desenvolvedores          |RF03     |Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)                                               |              
+|Excluir dados                      |RF04     |O usuário poderá excluir dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |                  
+|Alterar dados                      |RF05     |O usuário poderá alterar dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |
+|Filtrar dados                      |RF06     |O sistema poderá filtrar os dados: projetos, tarefas e desenvolvedores                                                                                      |
+|Imprimir relatórios                |RF07     |O usuário poderá imprimir relatórios: projetos, tarefas e desenvolvedores                                                                                   |                                                          
 
+
+##### Requisitos não funcionais
+
+
+| Requisitos não funcionais         |  Código |              Descrição                                                                                                           |
+| ----------------------------------|---------| ---------------------------------------------------------------------------------------------------------------------------------|
+|Amigável (intuitivo)               |RNF01    |Estética e Design minimalista: A interface do usuário deve ser implementada de maneira simples (interface web)                    |
+|Visibilidade do status do sistema  |RNF02    |As tarefas e projetos serão organizados em cores: verde (em andamento), amarelo (chegando perto da entrega) e vermelho (entregue) |
+|Consistência e padrões             |RNF03    |Consistência e padrões: Os dados serão visualizados em tabelas (diagrama de gantt)                                                |              
+|Disponibilidade                    |RNF04    |Os dados serão visualizados em tabelas (diagrama de gantt)                                                                        |             
+|Portabilidade                      |RNF05    |A consulta ao acervo deve estar disponivel na internet (principais navegadores disponíveis)                                       |
+|Acesso de segurança                |RNF06    |O sistema deve controlar o acesso das funcionalidades                                                                             |
+|Disponibilidade                    |RNF07    |Será utilizado banco de dados MySQL                                                                                               |              
+|Responsabilidade                   |RNF08    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
 
 
 ## Instalação do projeto/ Funcionalidade
