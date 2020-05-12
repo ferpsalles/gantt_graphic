@@ -48,7 +48,7 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 
 ## Proposta
 
-![](imagens/prototipodet.jpg "Prototipo")
+![Alt text](/Imagens/prototipodet.jpg "Prototipo")
 
 Realizamos um protótipo da interface web. O usuário poderá interagir adicionar projetos, tarefas, desenvolvedores.
 
