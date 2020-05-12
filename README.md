@@ -2,10 +2,14 @@
 
 Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para análise e controle de projetos.
 
-- Disciplinas relacionadas:
+1. Disciplinas relacionadas:
 - Arquitetura e Modelagem de Banco de dados - Prof Emanuel Mineda
 - Engenharia de Software - Prof Giuliano Araujo Bertoti
 - Linguagem de Programação I - Prof Adriana da Silva Jacinto
+
+## Problema
+
+A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégia um software com funcionalidades (projetos, tarefas e horas trabalhadas pelos meus funcionarios). O mesmo deverá ter como base o gráfico Gantt. 
 
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
@@ -42,6 +46,11 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 |Disponibilidade                    |RNF07    |Será utilizado banco de dados MySQL                                                                                               |              
 |Responsabilidade                   |RNF08    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
 
+## Proposta
+
+![](imagens/prototipodet.jpg "Prototipo")
+
+Realizamos um protótipo da interface web. O usuário poderá interagir adicionar projetos, tarefas, desenvolvedores.
 
 ## Instalação do projeto/ Funcionalidade
 
