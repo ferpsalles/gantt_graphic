@@ -29,7 +29,7 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 |Excluir dados                      |RF04     |O usuário poderá excluir dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |                  
 |Alterar dados                      |RF05     |O usuário poderá alterar dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |
 |Filtrar dados                      |RF06     |O sistema poderá filtrar os dados: projetos, tarefas e desenvolvedores                                                                                      |
-|Imprimir relatórios                |RF07     |O usuário poderá imprimir relatórios: projetos, tarefas e desenvolvedores                                                                                   |                                                          
+|Gerar relatórios                   |RF07     |O usuário poderá imprimir relatórios: projetos, tarefas e desenvolvedores                                                                                   |                                                          
 
 
 ##### Requisitos não funcionais
@@ -37,14 +37,12 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 
 | Requisitos não funcionais         |  Código |              Descrição                                                                                                           |
 | ----------------------------------|---------| ---------------------------------------------------------------------------------------------------------------------------------|
-|Amigável (intuitivo)               |RNF01    |Estética e Design minimalista: A interface do usuário deve ser implementada de maneira simples (interface web)                    |
+|Usabilidade                        |RNF01    |Estética e Design minimalista: A interface do usuário deve ser implementada de maneira simples (interface web)                    |
 |Visibilidade do status do sistema  |RNF02    |As tarefas e projetos serão organizados em cores: verde (em andamento), amarelo (chegando perto da entrega) e vermelho (entregue) |
-|Consistência e padrões             |RNF03    |Consistência e padrões: Os dados serão visualizados em tabelas (diagrama de gantt)                                                |              
-|Disponibilidade                    |RNF04    |Os dados serão visualizados em tabelas (diagrama de gantt)                                                                        |             
-|Portabilidade                      |RNF05    |A consulta ao acervo deve estar disponivel na internet (principais navegadores disponíveis)                                       |
-|Acesso de segurança                |RNF06    |O sistema deve controlar o acesso das funcionalidades                                                                             |
-|Disponibilidade                    |RNF07    |Será utilizado banco de dados MySQL                                                                                               |              
-|Responsabilidade                   |RNF08    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
+|Consistência e padrões             |RNF03    |Consistência e padrões: Os dados serão visualizados em tabelas (diagrama de gantt)                                                |                                                                               |             
+|Portabilidade                      |RNF04    |A consulta ao acervo deve estar disponivel na internet (principais navegadores disponíveis)                                       |
+|Acesso de segurança                |RNF05    |O sistema deve controlar o acesso das funcionalidades                                                                             |                                                                                     |              
+|Responsabilidade                   |RNF06    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
 
 ## Proposta
 
