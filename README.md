@@ -42,7 +42,7 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 |Consistência e padrões             |RNF03    |Consistência e padrões: Os dados serão visualizados em tabelas (diagrama de gantt)                                                |                                                                               |             
 |Portabilidade                      |RNF04    |A consulta ao acervo deve estar disponivel na internet (principais navegadores disponíveis)                                       |
 |Acesso de segurança                |RNF05    |O sistema deve controlar o acesso das funcionalidades                                                                             |                                                                                     |              
-|Responsabilidade                   |RNF06    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
+|Responsividade                     |RNF06    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
 
 ## Proposta
 
