@@ -11,7 +11,7 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 
 A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégia um software com funcionalidades (projetos, tarefas e horas trabalhadas pelos meus funcionarios). O mesmo deverá ter como base o gráfico Gantt. 
 
-![] (/Images/MashGGantt.gif)
+![] (/Imagens/MashGGantt.gif)
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
 
