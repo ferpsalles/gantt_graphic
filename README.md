@@ -11,6 +11,7 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 
 A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégia um software com funcionalidades (projetos, tarefas e horas trabalhadas pelos meus funcionarios). O mesmo deverá ter como base o gráfico Gantt. 
 
+![]
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
 
@@ -44,9 +45,6 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 |Acesso de segurança                |RNF05    |O sistema deve controlar o acesso das funcionalidades                                                                             |                                                                                     |              
 |Responsividade                     |RNF06    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
 
-## Proposta
-
-Criação de um software que vai apresentar em uma tabela dinâmica os projetos com livre movimentação de tarefas, que será designada para cada projeto, as tarefas e desenvolvedores. Essa tabela é uma plataforma colaborativa, onde todos os desenvolvedores terão acesso a ter uma perspectiva dos projetos cadastrados.  O uso de plataforma digital proporciona uma praticidade, pois todas as informações necessárias para a conclusão das atividades de uma empresa estão disponibilizadas. As operações oferecidas podem ser realizadas em qualquer lugar, desde que tenha acesso e internet. Realizamos um protótipo da interface web. O usuário poderá interagir adicionar projetos, tarefas, desenvolvedores.
 
 ## Instalação do projeto/ Funcionalidade
 
