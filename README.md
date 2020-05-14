@@ -46,9 +46,7 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 
 ## Proposta
 
-![Alt text](/Imagens/prototipodet.jpg "Prototipo")
-
-Realizamos um protótipo da interface web. O usuário poderá interagir adicionar projetos, tarefas, desenvolvedores.
+Criação de um software que vai apresentar em uma tabela dinâmica os projetos com livre movimentação de tarefas, que será designada para cada projeto, as tarefas e desenvolvedores. Essa tabela é uma plataforma colaborativa, onde todos os desenvolvedores terão acesso a ter uma perspectiva dos projetos cadastrados.  O uso de plataforma digital proporciona uma praticidade, pois todas as informações necessárias para a conclusão das atividades de uma empresa estão disponibilizadas. As operações oferecidas podem ser realizadas em qualquer lugar, desde que tenha acesso e internet. Realizamos um protótipo da interface web. O usuário poderá interagir adicionar projetos, tarefas, desenvolvedores.
 
 ## Instalação do projeto/ Funcionalidade
 
