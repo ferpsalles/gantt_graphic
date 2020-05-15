@@ -1,3 +1,7 @@
+## ENTREGAS
+- Link do video da Entrega 01: https://youtu.be/eWEpNS6VQXU
+
+
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
 
 Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para análise e controle de projetos.
