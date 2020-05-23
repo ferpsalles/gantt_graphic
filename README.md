@@ -1,5 +1,7 @@
 ## ENTREGAS
-- Link do video da Entrega 01: https://youtu.be/eWEpNS6VQXU
+- 1º Sprint
+Link do video: https://youtu.be/eWEpNS6VQXU
+Link para acessar o codigo: https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020/-/tree/master/1%C2%BA%20Sprint
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
