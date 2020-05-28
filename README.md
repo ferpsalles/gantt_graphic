@@ -1,7 +1,13 @@
 ## ENTREGAS
-1º Sprint
+1ª Sprint
 - Link do video: https://youtu.be/eWEpNS6VQXU
 - Link para acessar o codigo: https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020/-/tree/master/1%C2%BA%20Sprint
+
+2ª Sprint
+- ( RF01 / RF02 ) O usuário pode ADICIONAR e visualizar as tarefas no diagrama
+- ( RF01 / RF02 ) O usuário pode EXCLUIR as tarefas no diagrama
+- ( RF01 / RF02 ) O usuário pode MODIFICAR as tarefas no diagrama
+- O usuário é capaz de "arrastar" as tarefas adicionadas horizontalmente, alterando sua data de inicio e sua duração
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
@@ -15,7 +21,7 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 
 ## Problema
 
-A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégia um software com funcionalidades (projetos, tarefas e horas trabalhadas pelos meus funcionarios). O mesmo deverá ter como base o gráfico Gantt. 
+A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégica em um software que administre projetos, tarefas e horas trabalhadas pelos desenvolvedores. O mesmo deverá ter como base o gráfico Gantt. 
 
 ![](/Imagens/MashGGantt.gif)
 
