@@ -10,6 +10,9 @@
 - O usuário é capaz de "arrastar" as tarefas adicionadas horizontalmente, alterando sua data de inicio e sua duração
 
 
+- Link do video: https://youtu.be/kOohl1NTa_Y
+
+
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
 
 Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para análise e controle de projetos.
@@ -63,6 +66,9 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 1. Crie uma pasta no seu computador
 2. Abra o terminal
 3. Faça o clone do projeto com git clone https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020.git
+4. Abrir a pasta "projeto-integrador-2-sem.-2020"
+5. Clicar na pasta "2ª Sprint"
+6. Clicar no arquivo "index.html"
 
 
 ## Referências 
