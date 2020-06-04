@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Darwing</title>
+        <script src="jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap-reboot.min.css">
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages':['gantt']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function daysToMilliseconds(days) {
+            return days * 24 * 60 * 60 * 1000;
+            }
+
+            function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Task ID');
+            data.addColumn('string', 'Task Name');
+            data.addColumn('date', 'Start Date');
+            data.addColumn('date', 'End Date');
+            data.addColumn('number', 'Duration');
+            data.addColumn('number', 'Percent Complete');
+            data.addColumn('string', 'Dependencies');
+
+            data.addRows([
+                ['Research', 'Find sources',
+                new Date(2020, 0, 1), new Date(2020, 0, 5), null,  100,  null],
+                ['Write', 'Write paper',
+                null, new Date(2020, 0, 9), daysToMilliseconds(3), 25, 'Research,Outline'],
+                ['Cite', 'Create bibliography',
+                null, new Date(2020, 0, 7), daysToMilliseconds(1), 20, 'Research'],
+                ['Complete', 'Hand in paper',
+                null, new Date(2020, 0, 10), daysToMilliseconds(1), 0, 'Cite,Write'],
+                ['Outline', 'Outline paper',
+                null, new Date(2020, 0, 6), daysToMilliseconds(1), 100, 'Research']
+            ]);
+
+            var options = {
+                height: 275
+            };
+
+            var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="elemento-pai">
+            <div id="caixa-azul"> 
+                <div id="caixa-2">
+                    <h1>DARWING</h1>
+                <ul>
+                    <li class="itens">
+                        <a data-toggle="modal" data-target="#modalProjeto">Projeto</a>
+                    </li>
+                    <li class="itens">
+                        <a data-toggle="modal" data-target="#modalTarefa">Tarefa</a>
+                    </li>
+                    <li class="itens">
+                        <a data-toggle="modal" data-target="#modalDesenvolvedor">Desenvolvedor</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div>
+                <h2>Diagrama de Gantt</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="chart_div"></div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalProjeto" tabindex="-1" role="dialog" aria-labelledby="exampleModalProjeto" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalProjeto">Projeto</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="txtNomeProjeto">Nome do Projeto:</label>
+                                    <input type="text" required class="form-control" id="txtNomeProjeto" aria-describedby="proj lHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDescricaoProjeto">Data de Inicio:</label>
+                                    <input type="date" class="form-control" id="txtDescricaoProjeto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtFinal">Data Final:</label>
+                                    <input type="date" class="form-control" id="txtFinal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDescricaoProjeto">Descrição do Projeto:</label>
+                                    <input type="txt" class="form-control" id="txtDescricaoProjeto">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalTarefa" tabindex="-1" role="dialog" aria-labelledby="exampleModalTarefa" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalTarefa">Tarefa</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="txtNomeTarefa">Nome da Tarefa:</label>
+                                    <input type="text" required class="form-control" id="txtNomeTarefa" aria-describedby="proj lHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtInicio">Data de Inicio:</label>
+                                    <input type="date" class="form-control" id="txtInicio">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtFinal">Data Final:</label>
+                                    <input type="date" class="form-control" id="txtFinal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDescricaoTerafa">Descrição da Tarefa:</label>
+                                    <input type="txt" class="form-control" id="txtDescricaoTarefa">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalDesenvolvedor" tabindex="-1" role="dialog" aria-labelledby="exampleModalTarefa" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalDesenvolvedor">Desenvolvedor</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="txtNomeDesenvolvedor">Nome do(a) Desenvolvedor(ra):</label>
+                                    <input type="text" required class="form-control" id="txtNomeDesenvolvedor" aria-describedby="proj lHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtFinal">Carga horaria:</label>
+                                    <input type="date" class="form-control" id="txtFinal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDesenvolvedorProjeto">Projeto:</label>
+                                    <input type="txt" class="form-control" id="txtDesenvolvedorProjeto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDesenvolvedorTarefa">Tarefa:</label>
+                                    <input type="txt" class="form-control" id="txtDesenvolvedorTarefa">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

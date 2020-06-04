@@ -1,0 +1,66 @@
+#elemento-pai{
+    width: 100%;
+    height: 100%;
+    
+}
+#caixa-azul{
+    background: #2C3E63;
+    width: 250px;
+    height: 640px;
+    position: fixed;
+}
+#caixa-2{
+    border-radius: 10px 10px;
+    background: rgb(55, 75, 116);
+    width: 240px;
+    height: 622px;
+    position: fixed;
+    left:5px;
+    top:5px;
+    border-bottom: 5px;
+
+}
+a {
+    cursor: pointer;
+}
+h1{
+    color: #FFFFFF;
+    font-size:30px;
+    text-align: center;
+    border-bottom: 1px solid #77797C;
+    padding: 30px;
+}
+.itens{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    background: transparent;
+    padding: 20px;
+    border-bottom: 1px solid  #77797C; 
+}
+#gantt{
+    background: #FFFFFF;
+    height: 20px;
+    width: 1100px;
+}
+h2{
+    font-size: 20px;
+    color: #77797C;
+    padding-left: 60px;            
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: fixed;
+    top: 0px;
+    left: 249px;
+    right: 0px;
+    border-bottom: 1px solid #77797C;
+    position: fixed;  
+}
+#chart_div{
+    position:fixed; 
+    top: 109px;
+    left: 250px;
+    width: 1115px;
+    height: 100%;
+
+}
