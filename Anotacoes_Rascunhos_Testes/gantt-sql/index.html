@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+	<link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/main.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<title>Projeto Integrador</title>
+
+
+		    <!-- Bootstrap CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<!-- jQuery -->
+			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<!-- Bootstrap JS -->
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+			<!-- Icones Fontawesome -->
+			<script src="https://kit.fontawesome.com/83250a9515.js" crossorigin="anonymous"></script>
+			<!-- Firebase -->
+			<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase.js"></script>
+			<!-- React -->
+			<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+			<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+			<!-- JSX -->
+			<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+	<style type="text/css">
+		html, body{
+			height:100%;
+			padding:0px;
+			margin:0px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>DARWING</h2>
+			<ul>
+				<li><a href="#" style="text-decoration: none;" data-toggle="modal" data-target="#ProjetoModal"><i class="fas fa-plus"></i>Projeto</a></li>
+				<li><a href="#" style="text-decoration: none;" data-toggle="modal" data-target="#TarefaModal"><i class="fas fa-plus"></i>Tarefa</a></li>
+				<li><a href="#" style="text-decoration: none;" data-toggle="modal" data-target="#DevModal"><i class="fas fa-plus"></i>Desenvolvedor</a></li>
+				<li><a href="#" style="text-decoration: none;" data-toggle="modal" data-target="#RelatorioModal"><i class="fas fa-plus"></i>Relatorio</a></li>
+			</ul> 
+
+		</div>
+
+		<div id="modais">
+
+			<!-- Primeira MODAL DE NOVO PROJETO -->
+			<div class="modal fade" id="ProjetoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Novo Projeto</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Cliente:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+						
+						<div class="form-group">
+							<label for="gt-date" class="col-form-label">Data de Inicio:</label>
+							<input class="form-control" id="gt-date" type="date"></input>
+						</div>
+
+						<div class="form-group">
+							<label for="gt-date" class="col-form-label">Data do Fim:</label>
+							<input class="form-control" id="gt-date" type="date"></input>
+						</div>
+		
+						<div class="form-group">
+							<label for="gt-text" class="col-form-label">Descrição:</label>
+							<textarea class="form-control" id="gt-text"></textarea>
+						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary" onclick="criarElemento()" data-dismiss="modal">Salvar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Segunda MODAL DE NOVA TAREFA -->
+			<div class="modal fade" id="TarefaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Nova Tarefa</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Projeto:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Descrição:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+						
+						<div class="form-group">
+							<label for="gt-date" class="col-form-label">Data de Inicio:</label>
+							<input class="form-control" id="gt-date" type="date"></input>
+						</div>
+
+						<div class="form-group">
+							<label for="gt-date" class="col-form-label">Data do Fim:</label>
+							<input class="form-control" id="gt-date" type="date"></input>
+						</div>
+		
+						<div class="form-group">
+							<label for="gt-text" class="col-form-label">Programadores:</label>
+							<input type="text" class="form-control" id="gt-text"></input>
+						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary" onclick="criarElemento()" data-dismiss="modal">Salvar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Terceira MODAL DE RELACIONAR DESENVOLVEDORES -->
+			<div class="modal fade" id="DevModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Relacionar Desenvolvedores</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Projeto:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Tarefa:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Atividade:</label>
+							<input type="text" class="form-control" id="gt-dev">
+						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary" onclick="criarElemento()" data-dismiss="modal">Salvar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Quarta MODAL DE RELATORIOS -->
+			<div class="modal fade" id="RelatorioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Relatórios</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+						<div class="form-group">
+							<button class="btn btn-info" data-dismiss="modal">Projetos</button>
+						</div>
+
+						<div class="form-group">
+							<button class="btn btn-info" data-dismiss="modal">Tarefas</button>
+						</div>
+
+						<div class="form-group">
+							<button class="btn btn-info" data-dismiss="modal">Desenvolvedores</button>
+						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="main_content">
+			<div class="header">Projeto GANTT</div>  
+			<div class="info">
+			  <h6> Gerencimento de projetos</h6>
+
+			  <div id="gantt_here" style='width:100%; height:1000px;'></div>
+		  </div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript">
+	gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+
+	gantt.config.order_branch = true;/*!*/
+	gantt.config.order_branch_free = true;/*!*/
+
+	gantt.init("gantt_here");
+	gantt.load("/data");
+
+	var dp = new gantt.dataProcessor("/data");
+	dp.init(gantt);
+	dp.setTransactionMode("REST");
+</script>
+
+</body>
