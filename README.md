@@ -8,9 +8,18 @@
 - ( RF01 / RF02 ) O usuário pode EXCLUIR as tarefas no diagrama
 - ( RF01 / RF02 ) O usuário pode MODIFICAR as tarefas no diagrama
 - O usuário é capaz de "arrastar" as tarefas adicionadas horizontalmente, alterando sua data de inicio e sua duração
-
-
 - Link do video: https://youtu.be/kOohl1NTa_Y
+
+3ª Sprint
+- Continuação do cadastro 
+- (RF03 - Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
+- (RF04 - O usuário poderá excluir dados envolvendo os projetos, tarefas e desenvolvedores designados)                                                                
+- (RF05 - O usuário poderá alterar dados envolvendo os projetos, tarefas e desenvolvedores designados)
+- Link do vídeo: https://youtu.be/gyfDzBTVyL0
+
+4ª Sprint
+- Próximas entregas: 28/06
+- Entregar a integração do banco de dados com o front-end.
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
