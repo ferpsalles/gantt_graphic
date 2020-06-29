@@ -66,17 +66,11 @@
     dp.setTransactionMode("REST");
 
     gantt.serverList("staff", [
-		{key: 1, label: "John", backgroundColor:"#03A9F4", textColor:"#FFF"},
-		{key: 2, label: "Mike", backgroundColor:"#f57730", textColor:"#FFF"},
-		{key: 3, label: "Anna", backgroundColor:"#e157de", textColor:"#FFF"},
-		{key: 4, label: "Bill", backgroundColor:"#78909C", textColor:"#FFF"},
-		{key: 7, label: "Floe", backgroundColor:"#8D6E63", textColor:"#FFF"}
-	]);
-
-	gantt.serverList("priority", [
-		{key: 1, label: "High"},
-		{key: 2, label: "Normal"},
-		{key: 3, label: "Low"}
+		{key: 1, label: "Vitor", backgroundColor:"#03A9F4", textColor:"#FFF"},
+		{key: 2, label: "Fernanda", backgroundColor:"#f57730", textColor:"#FFF"},
+		{key: 3, label: "Gabriela", backgroundColor:"#e157de", textColor:"#FFF"},
+		{key: 4, label: "Cadu", backgroundColor:"#78909C", textColor:"#FFF"},
+		{key: 5, label: " ", backgroundColor:"#000", textColor:"#FFF"},
 	]);
 
 	// end test data
@@ -85,7 +79,6 @@
 	gantt.config.open_tree_initially = true;
 
 	var labels = gantt.locale.labels;
-	labels.column_priority = labels.section_priority = "Priority";
 	labels.column_owner = labels.section_owner = "Owner";
 
 	function byId(list, id) {
@@ -107,7 +100,6 @@
 
 	gantt.config.lightbox.sections = [
 		{name: "description", height: 38, map_to: "text", type: "textarea", focus: true},
-		{name: "priority", height: 22, map_to: "priority", type: "select", options: gantt.serverList("priority")},
 		{name: "owner", height: 22, map_to: "owner_id", type: "select", options: gantt.serverList("staff")},
 		{name: "time", type: "duration", map_to: "auto"}
 	];

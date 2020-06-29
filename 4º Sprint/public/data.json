@@ -2,10 +2,20 @@
     "tasks":[
        {"id":1, "text":"Project #1", "start_date":"01-04-2020", "duration":18},
        {"id":2, "text":"Task #1", "start_date":"02-04-2020","duration":8, "parent":1},
-       {"id":3, "text":"Task #2", "start_date":"11-04-2020","duration":8, "parent":1}
+       {"id":3, "text":"Task #2", "start_date":"11-04-2020","duration":8, "parent":1},
+       {"id":4, "text":"Project #2", "start_date":"07-04-2020", "duration":18},
+       {"id":5, "text":"Task #1", "start_date":"08-04-2020","duration":8, "parent":4},
+       {"id":6, "text":"Task #2", "start_date":"11-04-2020","duration":8, "parent":4},
+       {"id":7, "text":"Project #3", "start_date":"10-04-2020", "duration":18},
+       {"id":8, "text":"Task #1", "start_date":"11-04-2020","duration":8, "parent":7},
+       {"id":9, "text":"Task #2", "start_date":"12-04-2020","duration":8, "parent":7}
     ],
     "links":[
        {"id":1, "source":1, "target":2, "type":"1"},
-       {"id":2, "source":2, "target":3, "type":"0"}
+       {"id":2, "source":2, "target":3, "type":"0"},
+       {"id":3, "source":4, "target":5, "type":"1"},
+       {"id":4, "source":5, "target":6, "type":"0"},
+       {"id":5, "source":7, "target":8, "type":"1"},
+       {"id":6, "source":8, "target":9, "type":"0"}
     ]
   }
