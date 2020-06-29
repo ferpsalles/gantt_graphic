@@ -18,8 +18,12 @@
 - Link do vídeo: https://youtu.be/gyfDzBTVyL0
 
 4ª Sprint
-- Próximas entregas: 28/06
-- Entregar a integração do banco de dados com o front-end.
+- (RF03 - Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
+
+- Link do video: https://youtu.be/TrUKfrHIr7w
+
+5ª Sprint
+
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
