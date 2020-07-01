@@ -1,6 +1,6 @@
-package br.gov.sp.fatec.projetointegrador.projeto.model;
+package br.gov.sp.fatec.projetointegrador.project.model;
 
-import br.gov.sp.fatec.projetointegrador.tarefa.model.Tarefa;
+import br.gov.sp.fatec.projetointegrador.task.model.Task;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,25 +14,23 @@ import java.util.List;
 @Entity
 @Data
 @Builder
-@Table(name="projeto")
+@Table(name="projects")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Projeto {
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
 
-    private String nome;
+    private String projectName;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dataInicio;
+    private LocalDate startDate;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dataEntrega;
+    private LocalDate endDate;
 
-    private String cliente;
-
-    @OneToMany(mappedBy = "projeto")
-    private List<Tarefa> tarefas;
+    @OneToMany(mappedBy = "project")
+    private List<Task> tasks;
 }
