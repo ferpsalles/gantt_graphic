@@ -43,7 +43,7 @@ A empresa Necto Systems busca otimizar a organização dos projetos, desenhando 
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
 
-- Não definidas (Em desenvolvimento)
+- Node.js
 
 ## Levantamento de requisitos:
 Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
@@ -80,14 +80,14 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 2. Abra o terminal
 3. Faça o clone do projeto com git clone https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020.git
 4. Abrir a pasta "projeto-integrador-2-sem.-2020"
-5. Clicar na pasta "2ª Sprint"
-6. Clicar no arquivo "index.html"
+5. Clicar na pasta "Aplicacao"
+6. Clicar na pasta "Public"
+7. Clicar no arquivo "index.html"
 
 
 ## Referências 
 
-- https://frappe.io/gantt
-- https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+- https://docs.dhtmlx.com/
 
 
 ## Contribuintes
