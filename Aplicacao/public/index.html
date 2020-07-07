@@ -1,79 +1,141 @@
 <!DOCTYPE html>
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
- 
-  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
-  <link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/main.css">
-  <style type="text/css">
-    html, body{
-      height:100%;
-      padding:0px;
-      margin:0px;
-      overflow: hidden;
-    }
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-    .gantt_task_line.gantt_project{
-			color:white;
+	<script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+	<link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/main.css">
+	<style type="text/css">
+		html, body{
+			height:100%;
+			padding:0px;
+			margin:0px;
+			overflow: hidden;
 		}
+		.gantt_task_line.gantt_project{
+				color:white;
+			}
 
-		.gantt_side_content{
-			color:#333;
-		}
+			.gantt_side_content{
+				color:#333;
+			}
 
-		.summary-bar{
-			font-weight: bold;
-		}
+			.summary-bar{
+				font-weight: bold;
+			}
 
-		.gantt_resource_task .gantt_task_content{
-			color:inherit;
-		}
+			.gantt_resource_task .gantt_task_content{
+				color:inherit;
+			}
 
-		.gantt_resource_task .gantt_task_progress{
-			background-color:rgba(33,33,33,0.3);
-		}
+			.gantt_resource_task .gantt_task_progress{
+				background-color:rgba(33,33,33,0.3);
+			}
 
-		.gantt_cell:nth-child(1) .gantt_tree_content{
-			border-radius: 16px;
-			width: 100%;
-			height: 80%;
-			margin: 5% 0;
-			line-height: 230%;
-		}
-
-  </style>
+			.gantt_cell:nth-child(1) .gantt_tree_content{
+				border-radius: 16px;
+				width: 100%;
+				height: 80%;
+				margin: 5% 0;
+				line-height: 230%;
+			}
+	</style>
 </head>
-<body style="background-color:#4b4276">
-  <header>
-    <div id="container">
 
-      <h1 style="text-align:left;background-color:#4b4276;color: #fff;padding: 5px 30px">DARWING</h1>
-      <nav>
-      <ul>
-        <li><a>Report</a></li>
-      </ul>
-      </nav>
-    
-    </div>
-  </header>
-  
-  <div id="gantt_here" style='width:100%; height:100%;'></div>
-  <script type="text/javascript">
-    gantt.init("gantt_here");
-    gantt.load("data.json");
-    var dp = new gantt.dataProcessor("/api");
-    dp.init(gantt);
-    dp.setTransactionMode("REST");
+<body>
+	<header>
+		<div id="container">
+	
+		  <h1 style="text-align:left;background-color:#4b4276;color: #fff;padding: 5px 30px">DARWING</h1>
+		  <nav>
+		  <ul>
+			<li><a><input type="radio" id="scale1" class="gantt_radio" name="scale" value="hour"><label for="scale1">Hour scale</label></a></li>
+			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="day"><label for="scale3">Day scale</label></a></li>
+			<li><a><input type="radio" id="scale2" class="gantt_radio" name="scale" value="week"><label for="scale2">Week scale</label></a></li>	
+			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="month"><label for="scale3">Month scale</label></a></li>
+			<li><a>Report</a></li>
+		  </ul>
+		  </nav>
+		
+		</div>
+	</header>
+<div id="gantt_here" style='width:100%; height:100%;'></div>
+<script type="text/javascript">
 
-    gantt.serverList("staff", [
+var zoomConfig = {
+		levels: [
+			{
+				name:"hour",
+				scale_height: 27,
+				min_column_width:80,
+				scales:[
+				{unit: "hour", step: 1, format: "%H:%i"}
+				]
+			},
+			{
+				name:"day",
+				scale_height: 27,
+				min_column_width:80,
+				scales:[
+					{unit: "day", step: 1, format: "%d %M"}
+				]
+			},
+			{
+				name:"week",
+				scale_height: 50,
+				min_column_width:50,
+				scales:[
+					{unit: "week", step: 1, format: function (date) {
+						var dateToStr = gantt.date.date_to_str("%d %M");
+						var endDate = gantt.date.add(date, -6, "day");
+						var weekNum = gantt.date.date_to_str("%W")(date);
+						return "#" + weekNum + ", " + dateToStr(date) + " - " + dateToStr(endDate);
+					}},
+					{unit: "day", step: 1, format: "%j %D"}
+				]
+			},
+			{
+				name:"month",
+				scale_height: 50,
+				min_column_width:120,
+				scales:[
+					{unit: "month", format: "%F, %Y"},
+					{unit: "week", format: "Week #%W"}
+				]
+			}
+		]
+	};
+
+	gantt.ext.zoom.init(zoomConfig);
+	gantt.ext.zoom.setLevel("day");
+	gantt.ext.zoom.attachEvent("onAfterZoom", function(level, config){
+		document.querySelector(".gantt_radio[value='" +config.name+ "']").checked = true;
+	})
+
+	function zoomIn(){
+		gantt.ext.zoom.zoomIn();
+	}
+	function zoomOut(){
+		gantt.ext.zoom.zoomOut()
+	}
+
+	var radios = document.getElementsByName("scale");
+	for (var i = 0; i < radios.length; i++) {
+		radios[i].onclick = function (event) {
+			gantt.ext.zoom.setLevel(event.target.value);
+		};
+	}
+	
+		//lista de DEVS
+	gantt.serverList("staff", [
 		{key: 1, label: "Vitor", backgroundColor:"#03A9F4", textColor:"#FFF"},
 		{key: 2, label: "Fernanda", backgroundColor:"#f57730", textColor:"#FFF"},
 		{key: 3, label: "Gabriela", backgroundColor:"#e157de", textColor:"#FFF"},
 		{key: 4, label: "Cadu", backgroundColor:"#78909C", textColor:"#FFF"},
-		{key: 5, label: " ", backgroundColor:"#000", textColor:"#FFF"},
+		{key: 7, label: "Adriana", backgroundColor:"#8D6E63", textColor:"#FFF"},
+		{key: 8, label: "  ", backgroundColor:"#000", textColor:"#FFF"}
 	]);
-
-	// end test data
+		//CONFIG DA BARRA LATERAL
 	gantt.config.grid_width = 420;
 	gantt.config.grid_resize = true;
 	gantt.config.open_tree_initially = true;
@@ -88,25 +150,21 @@
 		}
 		return "";
 	}
-
+			//CONFIGURAÇÃO DA COLUNAS DE INFO
 	gantt.config.columns = [
 		{name: "owner", width: 80, align: "center", template: function (item) {
 				return byId(gantt.serverList('staff'), item.owner_id)}},
 		{name: "text", label: "Task name", tree: true, width: '*'},
-    {name: "start_date", align: "center", width: 80, resize: true},
-    {name: "duration", width: 60, align: "center"},
+    	{name: "start_date", align: "center", width: 80, resize: true},
+    	{name: "duration", width: 60, align: "center"},
 		{name: "add", width: 40}
 	];
-
+			//MODAL DA ADIÇÃO DE TAREFAS
 	gantt.config.lightbox.sections = [
 		{name: "description", height: 38, map_to: "text", type: "textarea", focus: true},
 		{name: "owner", height: 22, map_to: "owner_id", type: "select", options: gantt.serverList("staff")},
 		{name: "time", type: "duration", map_to: "auto"}
 	];
-
-	gantt.templates.rightside_text = function(start, end, task){
-		return byId(gantt.serverList('staff'), task.owner_id);
-	};
 
 	gantt.templates.grid_row_class =
 		gantt.templates.task_row_class =
@@ -146,7 +204,16 @@
 		element.innerHTML = html.join("");
 	});
 
+	gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+
+	gantt.config.order_branch = true;/*!*/
+	gantt.config.order_branch_free = true;/*!*/
+
 	gantt.init("gantt_here");
-	gantt.parse(taskData);
-  </script>
+	gantt.load("/data");
+
+	var dp = new gantt.dataProcessor("/data");
+	dp.init(gantt);
+	dp.setTransactionMode("REST");
+</script>
 </body>
