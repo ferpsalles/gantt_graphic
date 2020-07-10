@@ -53,8 +53,8 @@ app.post("/data/task", function (req, res) { // adds new task to database
 	db.query("SELECT MAX(sortorder) AS maxOrder FROM gantt_tasks")
 		.then(function (result) { /*!*/ // assign max sort order to new task
 			var orderIndex = (result[0].maxOrder || 0) + 1;
-			return db.query("INSERT INTO gantt_tasks(text, start_date, duration, progress, parent, sortorder) VALUES (?,?,?,?,?,?)",
-				[task.text, task.start_date, task.duration, task.progress, task.parent, orderIndex]);
+			return db.query("INSERT INTO gantt_tasks(text, start_date, duration, progress, parent, sortorder, owner_id) VALUES (?,?,?,?,?,?,?)",
+				[task.text, task.start_date, task.duration, task.progress, task.parent, orderIndex,task.owner_id]);
 		})
 		.then(function (result) {
 			sendResponse(res, "inserted", result.insertId);
@@ -71,8 +71,8 @@ app.put("/data/task/:id", function (req, res) {
 		task = getTask(req.body);
 
 	Promise.all([
-		db.query("UPDATE gantt_tasks SET text = ?, start_date = ?, duration = ?, progress = ?, parent = ? WHERE id = ?",
-			[task.text, task.start_date, task.duration, task.progress, task.parent, sid]),
+		db.query("UPDATE gantt_tasks SET text = ?, start_date = ?, duration = ?, progress = ?, parent = ?, owner_id = ? WHERE id = ?",
+			[task.text, task.start_date, task.duration, task.progress, task.parent, task.owner_id, sid]),
 		updateOrder(sid, target)
 	])
 		.then(function (result) {
@@ -174,7 +174,8 @@ function getTask(data) {
 		start_date: data.start_date.date("YYYY-MM-DD"),
 		duration: data.duration,
 		progress: data.progress || 0,
-		parent: data.parent
+		parent: data.parent,
+		owner_id : data.owner_id
 	};
 }
 
