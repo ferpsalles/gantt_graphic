@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>DARWING!</title>
 
 	<script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
 	<link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="static/css/main.css">
 	<style type="text/css">
 		html, body{
@@ -46,18 +53,82 @@
 	<header>
 		<div id="container">
 	
-		  <h1 style="text-align:left;background-color:#4b4276;color: #fff;padding: 5px 30px">DARWING</h1>
+		  <h5 style="text-align:center;background-color:#4b4276;color: #fff;padding: 5px 30px">DARWING</h5>
 		  <nav>
 		  <ul>
+			<li><a href="#" class="btn btn-secondary" style="text-decoration: none;" data-toggle="modal" data-target="#DevModal"><i class="fas fa-plus"></i> Cadastro Desenvolvedor</a></li>
+			<li><a href="#" class="btn btn-secondary" style="text-decoration: none;" data-toggle="modal" data-target="#RelatorioModal"><i class="fas fa-plus"></i> Relatório</a></li>
 			<li><a><input type="radio" id="scale1" class="gantt_radio" name="scale" value="hour"><label for="scale1">Hour scale</label></a></li>
 			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="day"><label for="scale3">Day scale</label></a></li>
 			<li><a><input type="radio" id="scale2" class="gantt_radio" name="scale" value="week"><label for="scale2">Week scale</label></a></li>	
 			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="month"><label for="scale3">Month scale</label></a></li>
-			<li><a>Report</a></li>
 		  </ul>
 		  </nav>
 		
 		</div>
+		<div id="modais">
+
+			<!-- Primeiro MODAL  -->
+			<div class="modal fade" id="DevModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Cadastro Desenvolvedor</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+						<div class="form-group">
+							<label for="gt-dev" class="col-form-label">Nome Completo:</label>
+							<input type="text" class="form-control" id="name-dev">
+						</div>
+						
+						<div class="form-group">
+							<label for="gt-time" class="col-form-label">Carga Horária:</label>
+							<input class="form-control" id="dev-time" type="time"></input>
+						</div>
+
+						<div class="form-group">
+							<label for="gt-email" class="col-form-label">Email:</label>
+							<input class="form-control" id="gt-email" type="email"></input>
+						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary" onclick="criarElemento()" data-dismiss="modal">Salvar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Segundo MODAL -->
+			<div class="modal fade" id="RelatorioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Relatório</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Projeto</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Tarefas</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Desenvolvedores</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</header>
 <div id="gantt_here" style='width:100%; height:100%;'></div>
 <script type="text/javascript">
