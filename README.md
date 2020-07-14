@@ -25,6 +25,7 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 - Arquitetura e Modelagem de Banco de dados - Prof Emanuel Mineda
 - Engenharia de Software - Prof Giuliano Araujo Bertoti
 - Linguagem de Programação I - Prof Adriana da Silva Jacinto
+- Laboratório em Desenvolvimento em Banco de Dados II - Prof Adriana da Silva Jacinto
 
 ## Problema
 
