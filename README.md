@@ -1,29 +1,20 @@
 ## ENTREGAS
 1ª Sprint
 - Link do video: https://youtu.be/eWEpNS6VQXU
-- Link para acessar o codigo: https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020/-/tree/master/1%C2%BA%20Sprint
+
 
 2ª Sprint
-- ( RF01 / RF02 ) O usuário pode ADICIONAR e visualizar as tarefas no diagrama
-- ( RF01 / RF02 ) O usuário pode EXCLUIR as tarefas no diagrama
-- ( RF01 / RF02 ) O usuário pode MODIFICAR as tarefas no diagrama
-- O usuário é capaz de "arrastar" as tarefas adicionadas horizontalmente, alterando sua data de inicio e sua duração
 - Link do video: https://youtu.be/kOohl1NTa_Y
 
 3ª Sprint
-- Continuação do cadastro 
-- (RF03 - Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
-- (RF04 - O usuário poderá excluir dados envolvendo os projetos, tarefas e desenvolvedores designados)                                                                
-- (RF05 - O usuário poderá alterar dados envolvendo os projetos, tarefas e desenvolvedores designados)
 - Link do vídeo: https://youtu.be/gyfDzBTVyL0
 
 4ª Sprint
-- (RF03 - Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)
-
 - Link do video: https://youtu.be/TrUKfrHIr7w
 
 5ª Sprint
 
+- Link do video: 
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
@@ -37,13 +28,15 @@ Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para
 
 ## Problema
 
-A empresa Necto Systems busca otimizar a organização dos projetos, desenhando uma visão estratégica em um software que administre projetos, tarefas e horas trabalhadas pelos desenvolvedores. O mesmo deverá ter como base o gráfico Gantt. 
+O cliente busca otimizar a organização dos projetos, desenhando uma visão estratégica em um software que administre projetos, tarefas e horas trabalhadas pelos desenvolvedores. O mesmo deverá ter como base o gráfico Gantt. 
 
 ![](/Imagens/MashGGantt.gif)
 
 ## Requerimentos (Tecnologias e bibliotecas utilizadas)
 
 - Node.js
+- biblioteca: dhtmlx
+- banco de dados: MySQL
 
 ## Levantamento de requisitos:
 Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
@@ -82,7 +75,8 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 4. Abrir a pasta "projeto-integrador-2-sem.-2020"
 5. Clicar na pasta "Aplicacao"
 6. Clicar na pasta "Public"
-7. Clicar no arquivo "index.html"
+7. Clicar no arquivo "login.html"
+8. Usuário: admin@darwing e senha: darwing
 
 
 ## Referências 
@@ -92,11 +86,19 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 
 ## Contribuintes
 
-- Fernanda Ramos: https://gitlab.com/ferpsalles
-- Gabriela Momilli: https://gitlab.com/gabsmomilli
-- Vitor Daniel Silva: https://gitlab.com/VitorDan
+- Fernanda Ramos
+git: https://gitlab.com/ferpsalles
+Linkedin: https://www.linkedin.com/in/fernanda-ramos-de-padua-salles-44329b157/
+
+- Gabriela Momilli
+gitlab: https://gitlab.com/gabsmomilli
+linkedin: 
+
+- Vitor Daniel Silva
+gitlab: https://gitlab.com/VitorDan
+linkedin: https://www.linkedin.com/in/vitor-daniel-9343bb150/
 
 
 ## Agradecimentos
 
-Agradecemos aos professores pelo suporte oferecido para o progresso do projeto
+Agradecemos aos professores pelo suporte oferecido para o progresso do projeto.
