@@ -14,7 +14,7 @@
 
 5ª Sprint
 
-- Link do video: 
+- Link do video: https://youtu.be/GuhoNp6MZF4 
 
 
 ## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
