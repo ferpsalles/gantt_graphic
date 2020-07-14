@@ -87,16 +87,16 @@ Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas
 ## Contribuintes
 
 - Fernanda Ramos
-git: https://gitlab.com/ferpsalles
+gitlab: https://gitlab.com/ferpsalles
 Linkedin: https://www.linkedin.com/in/fernanda-ramos-de-padua-salles-44329b157/
 
 - Gabriela Momilli
 gitlab: https://gitlab.com/gabsmomilli
-linkedin: https://www.linkedin.com/in/gabriela-momilli-105b1a184/
+Linkedin: https://www.linkedin.com/in/gabriela-momilli-105b1a184/
 
 - Vitor Daniel Silva
 gitlab: https://gitlab.com/VitorDan
-linkedin: https://www.linkedin.com/in/vitor-daniel-9343bb150/
+Linkedin: https://www.linkedin.com/in/vitor-daniel-9343bb150/
 
 
 ## Agradecimentos
