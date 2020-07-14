@@ -52,87 +52,22 @@
 <body>
 	<header>
 		<div id="container">
-	
-		  <h5 style="text-align:center;background-color:#4b4276;color: #fff;padding: 5px 30px">DARWING</h5>
+		  <h5 style="text-align:center;background-color:#4b4276;color: #fff;padding: 5px 5px">DARWING</h5>
 		  <nav>
 		  <ul>
-			<li><a href="#" class="btn btn-secondary" style="text-decoration: none;" data-toggle="modal" data-target="#DevModal"><i class="fas fa-plus"></i> Cadastro Desenvolvedor</a></li>
-			<li><a href="#" class="btn btn-secondary" style="text-decoration: none;" data-toggle="modal" data-target="#RelatorioModal"><i class="fas fa-plus"></i> Relatório</a></li>
-			<li><a><input type="radio" id="scale1" class="gantt_radio" name="scale" value="hour"><label for="scale1">Hour scale</label></a></li>
-			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="day"><label for="scale3">Day scale</label></a></li>
-			<li><a><input type="radio" id="scale2" class="gantt_radio" name="scale" value="week"><label for="scale2">Week scale</label></a></li>	
-			<li><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="month"><label for="scale3">Month scale</label></a></li>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale1" class="gantt_radio" name="scale" value="hour"><label for="scale1">Hour scale</label></a></li>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="day"><label for="scale3">Day scale</label></a></li>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale2" class="gantt_radio" name="scale" value="week"><label for="scale2">Week scale</label></a></li>	
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="month"><label for="scale3">Month scale</label></a></li>
 		  </ul>
 		  </nav>
-		
 		</div>
-		<div id="modais">
-
-			<!-- Primeiro MODAL  -->
-			<div class="modal fade" id="DevModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Cadastro Desenvolvedor</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<form>
-						<div class="form-group">
-							<label for="gt-dev" class="col-form-label">Nome Completo:</label>
-							<input type="text" class="form-control" id="name-dev">
-						</div>
-						
-						<div class="form-group">
-							<label for="gt-time" class="col-form-label">Carga Horária:</label>
-							<input class="form-control" id="dev-time" type="time"></input>
-						</div>
-
-						<div class="form-group">
-							<label for="gt-email" class="col-form-label">Email:</label>
-							<input class="form-control" id="gt-email" type="email"></input>
-						</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-primary" onclick="criarElemento()" data-dismiss="modal">Salvar</button>
-					</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Segundo MODAL -->
-			<div class="modal fade" id="RelatorioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Relatório</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<form>
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Projeto</button>
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Tarefas</button>
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Desenvolvedores</button>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 	</header>
+
 <div id="gantt_here" style='width:100%; height:100%;'></div>
 <script type="text/javascript">
 
+gantt.config.duration_unit = "hour";
 var zoomConfig = {
 		levels: [
 			{
@@ -196,16 +131,16 @@ var zoomConfig = {
 			gantt.ext.zoom.setLevel(event.target.value);
 		};
 	}
-	
-		//lista de DEVS
-	gantt.serverList("staff", [
+	var dev =  [
 		{key: 1, label: "Vitor", backgroundColor:"#03A9F4", textColor:"#FFF"},
 		{key: 2, label: "Fernanda", backgroundColor:"#f57730", textColor:"#FFF"},
 		{key: 3, label: "Gabriela", backgroundColor:"#e157de", textColor:"#FFF"},
 		{key: 4, label: "Cadu", backgroundColor:"#78909C", textColor:"#FFF"},
 		{key: 7, label: "Adriana", backgroundColor:"#8D6E63", textColor:"#FFF"},
 		{key: 8, label: "  ", backgroundColor:"#000", textColor:"#FFF"}
-	]);
+	]
+		//lista de DEVS'
+	gantt.serverList("staff", dev);
 		//CONFIG DA BARRA LATERAL
 	gantt.config.grid_width = 420;
 	gantt.config.grid_resize = true;
@@ -221,6 +156,7 @@ var zoomConfig = {
 		}
 		return "";
 	}
+
 			//CONFIGURAÇÃO DA COLUNAS DE INFO
 	gantt.config.columns = [
 		{name: "owner", width: 80, align: "center", template: function (item) {
@@ -281,6 +217,7 @@ var zoomConfig = {
 	gantt.config.order_branch_free = true;/*!*/
 
 	gantt.init("gantt_here");
+
 	gantt.load("/data");
 
 	var dp = new gantt.dataProcessor("/data");
