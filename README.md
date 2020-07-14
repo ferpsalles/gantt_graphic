@@ -92,7 +92,7 @@ Linkedin: https://www.linkedin.com/in/fernanda-ramos-de-padua-salles-44329b157/
 
 - Gabriela Momilli
 gitlab: https://gitlab.com/gabsmomilli
-linkedin: 
+linkedin: https://www.linkedin.com/in/gabriela-momilli-105b1a184/
 
 - Vitor Daniel Silva
 gitlab: https://gitlab.com/VitorDan
